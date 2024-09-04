@@ -1,13 +1,12 @@
-function CardsContainer({ value }) {
+function CardsContainer({ data }) {
   return (
-    <div
-      id={value.createdAt}
-      style={{ backgroundColor: value.cardBg, height: "200px" }}
-      className="h-72 w-72 flex flex-wrap items-center justify-center shadow-lg rounded-md"
-    >
-      <h1 className="text-2xl capitalize " style={{ color: value.textColor }}>
-        {value.userText}
+    <div className="cards  h-60 w-80 overflow-hidden bg-red-400 flex flex-wrap items-center justify-center shadow-lg rounded-md">
+      <h1 className="cardHeading p-4 text-white  text-2xl capitalize ">
+        {data.text}
       </h1>
+      <div className="cardImg overflow-hidden border border-green-600 w-full h-full">
+        <img className="  w-full h-full" src={data.url} alt="" />
+      </div>
     </div>
   );
 }
